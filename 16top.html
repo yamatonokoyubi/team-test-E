@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>今後絶対流行るスイーツ — 予想トップ</title>
+  <link rel="stylesheet" href="16style.css">
+  <meta name="description" content="これから流行るスイーツと、どの国のスイーツが注目されるかを予想した特集ページです。シンプルでおしゃれなデザインと軽いアニメーションつき。">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="home-link" href="16index.html">← トップ（16index）へ戻る</a>
+      <h1 class="title">今後絶対流行るスイーツ</h1>
+      <p class="subtitle">どの国のスイーツが注目を集めるか、今のうちに予想します。</p>
+    </div>
+  </header>
+
+  <main class="wrap main-content">
+    <section class="controls">
+      <div class="filter-label">国で絞る：</div>
+      <div class="filters">
+        <button class="filter-btn active" data-country="all">すべて</button>
+        <button class="filter-btn" data-country="japan">日本</button>
+        <button class="filter-btn" data-country="taiwan">台湾</button>
+        <button class="filter-btn" data-country="india">インド</button>
+        <button class="filter-btn" data-country="france">フランス</button>
+        <button class="filter-btn" data-country="mexico">メキシコ</button>
+      </div>
+    </section>
+
+    <section class="cards" aria-live="polite">
+      <!-- Each card: data-country and data-name used by JS -->
+      <article class="card" data-country="japan" data-name="和洋フルーツ大福タルト" data-reveal>
+        <div class="card-head">和洋フルーツ大福タルト</div>
+        <div class="card-body">大福とタルトのハイブリッド。和菓子のしっとり感と洋菓子のビジュアルで若年層にも受ける逸品。</div>
+        <div class="card-foot">予想国：日本</div>
+      </article>
+
+      <article class="card" data-country="taiwan" data-name="ミルクティーエクレア" data-reveal>
+        <div class="card-head">ミルクティーエクレア</div>
+        <div class="card-body">台湾のミルクティーブームが洋菓子へ波及。香り高い茶の風味を効かせたクリーム。</div>
+        <div class="card-foot">予想国：台湾</div>
+      </article>
+
+      <article class="card" data-country="india" data-name="チャイスパイス・クランブル" data-reveal>
+        <div class="card-head">チャイスパイス・クランブル</div>
+        <div class="card-body">シナモンやカルダモンを効かせたチャイ風味のクランブル。スパイス×スイーツの新潮流。</div>
+        <div class="card-foot">予想国：インド（エッセンス）</div>
+      </article>
+
+      <article class="card" data-country="france" data-name="ミニ・フロマージュブリュレ" data-reveal>
+        <div class="card-head">ミニ・フロマージュブリュレ</div>
+        <div class="card-body">フランスの技術を使った、チーズとカラメルのミニデザート。お酒とも合う上品な味わい。</div>
+        <div class="card-foot">予想国：フランス</div>
+      </article>
+
+      <article class="card" data-country="mexico" data-name="チリアガトーフロマージュ" data-reveal>
+        <div class="card-head">チリアガトーフロマージュ</div>
+        <div class="card-body">チリの辛味をアクセントにしたガトーショコラ系。甘さの余韻にスパイスが残る大人向け。</div>
+        <div class="card-foot">予想国：メキシコ（影響）</div>
+      </article>
+    </section>
+
+    <footer class="note">
+      <p>※これはあくまで予想です。流行の要素はSNS・気候・食文化の融合によって変化します。</p>
+    </footer>
+  </main>
+
+  <script src="16script.js" defer></script>
+</body>
+</html>
