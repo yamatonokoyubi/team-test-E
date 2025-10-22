@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #ff003c; /* Crazy Raccoon Red */
+    --secondary-color: #00c8ff; /* Street Fighter Blue */
+    --dark-bg: #121212;
+    --light-text: #f5f5f5;
+    --dark-text: #222;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(255, 0, 60, 0.3);
+}
+
+header .logo h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2em;
+    text-shadow: 0 0 10px var(--primary-color), 0 0 20px var(--primary-color);
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 30px;
+}
+
+header nav ul li a {
+    font-weight: 700;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    filter: brightness(0.5);
+}
+
+.hero-content {
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-content h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 5em;
+    color: var(--light-text);
+    text-transform: uppercase;
+    text-shadow: 0 0 15px var(--secondary-color), 0 0 30px var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    color: var(--light-text);
+}
+
+main section {
+    padding: 100px 50px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+main section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+main section h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+#fighters .fighter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.fighter-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid var(--secondary-color);
+    border-radius: 10px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.fighter-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--secondary-color), 0 0 40px var(--secondary-color);
+}
+
+.fighter-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.fighter-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8em;
+    color: var(--light-text);
+}
+
+#news ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#news li {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#news time {
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-right: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid var(--primary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
