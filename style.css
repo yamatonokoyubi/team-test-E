@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+
+body {
+    font-family: 'DotGothic16', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00, #ff00ff);
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border: 3px solid #fff;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+h2 {
+    border-bottom: 2px dashed #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+h2 .char {
+    display: inline-block;
+    opacity: 0;
+    animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px) scale(1.5);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fade-in-text 1s forwards;
+}
+
+@keyframes fade-in-text {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #ff00ff;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+    animation: color-change 5s infinite;
+}
+
+@keyframes color-change {
+    0% { color: #ff00ff; }
+    25% { color: #00ffff; }
+    50% { color: #ffff00; }
+    75% { color: #00ff00; }
+    100% { color: #ff00ff; }
+}
